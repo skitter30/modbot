@@ -53,7 +53,7 @@ for ind in threads.index:
     df = df.append(temp_df, ignore_index = True)
 
 df.columns = ['text', 'alignment', 'game']
-df.to_csv (r'D:\Coding\mafia-nlp-auro\R\data\auro-posts.csv', index = False, header=True)
+df.to_csv (r'file.path', index = False, header=True)
 
 #Clean, tf-idf score, and TSNE
 df['tsne'] = (
