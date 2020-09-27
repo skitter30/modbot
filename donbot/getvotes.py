@@ -40,7 +40,7 @@ class GetVotes(Donbot):
                 print(link_temp)
                 page_temp = self.session.get(link_temp)
                 content_temp = html.fromstring(page_temp.content)
-                posts_temp = content.cssselect(".postbody .content")
+                posts_temp = content_temp.cssselect(".postbody .content")
                 posts.extend(posts_temp)
 
             return [self.parse_post(post) for post in posts]
